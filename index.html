@@ -21,25 +21,76 @@
         <div class="container hero-content">
             <h1 class="glitch-title">OCEANOS 2050</h1>
             <p>A tecnologia a serviço da regeneração da vida marinha. O futuro começa no presente.</p>
-            <a href="#conscientizacao" class="btn-main">Saiba Mais</a>
+            <a href="#conscientizacao" class="btn-main" id="btn-hero">Saiba Mais</a>
         </div>
     </section>
 
     <main class="container main-content" id="conscientizacao">
-        <section class="card">
-            <h2> O Desafio Global</h2>
-            <p>Em um mundo cada vez mais tecnológico, não podemos esquecer as raízes do nosso planeta. Toneladas de resíduos ainda ameaçam os ecossistemas marinhos. Proteger os oceanos é garantir a sobrevivência das próximas gerações.</p>
+        
+        <section class="grid-section">
+            <article class="card">
+                <h2>O Desafio Global</h2>
+                <p>Em um mundo cada vez mais tecnológico, não podemos esquecer as raízes do nosso planeta. Toneladas de resíduos ainda ameaçam os ecossistemas marinhos. Proteger os oceanos é garantir a sobrevivência das próximas gerações.</p>
+            </article>
+
+            <article class="card">
+                <h2>Soluções Tecnológicas</h2>
+                <p>Utilizamos inteligência artificial, robótica marinha e monitoramento via satélite para mapear e limpar os ecossistemas aquáticos em tempo real.</p>
+            </article>
+
+            <article class="card">
+                <h2>Sua Ação Importa</h2>
+                <p>Reduza o consumo de plástico descartável, apoie iniciativas sustentáveis e espalhe a mensagem. A conscientização é a maior ferramenta de transformação.</p>
+            </article>
         </section>
 
-        <section class="card">
-            <h2> Soluções Tecnológicas</h2>
-            <p>Utilizamos inteligência artificial, robótica marinha e monitoramento via satélite para mapear e limpar os ecossistemas aquáticos em tempo real.</p>
+        <section class="section-block">
+            <h2 class="section-title">Curiosidades Futuristas</h2>
+            <div class="grid-section">
+                <div class="card card-mini">
+                    <h3> Nanorrobôs Limpadores</h3>
+                    <p>Pesquisadores estão desenvolvendo micro-robôs capazes de decompor microplásticos na água usando luz solar.</p>
+                </div>
+                <div class="card card-mini">
+                    <h3> Corais em 3D</h3>
+                    <p>Impressoras 3D estão criando estruturas de cerâmica biodegradável para reconstruir recifes destruídos.</p>
+                </div>
+                <div class="card card-mini">
+                    <h3> Ocorrência de Oxigênio</h3>
+                    <p>Mais de 50% do oxigênio do planeta é produzido pelos oceanos através dos fitoplânctons.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="card">
-            <h2> Sua Ação Importa</h2>
-            <p>Reduza o consumo de plástico descartável, apoie iniciativas sustentáveis e espalhe a mensagem. A conscientização é a maior ferramenta de transformação.</p>
+        <section class="section-block">
+            <h2 class="section-title">Últimas Atualizações</h2>
+            <div class="news-list">
+                <article class="news-card">
+                    <span class="news-date">12 AGO 2026</span>
+                    <h3>Rede Autônoma de Coleta Conclui 1º Ano de Operação</h3>
+                    <p>Frota de barcos movidos a energia solar removeu mais de 50 toneladas de resíduos plásticos do Pacífico.</p>
+                </article>
+                <article class="news-card">
+                    <span class="news-date">05 AGO 2026</span>
+                    <h3>Santuário Marinho Inteligente É Criado</h3>
+                    <p>Área de conservação monitorada por sensores de IA detecta pesca ilegal e variações térmicas instantaneamente.</p>
+                </article>
+            </div>
         </section>
+
+        <section class="section-block quiz-section">
+            <h2 class="section-title">Quiz de Conscientização</h2>
+            <div class="card quiz-card">
+                <p id="quiz-question">Qual é a principal fonte de oxigênio do nosso planeta?</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn" data-correct="false">A Floresta Amazônica</button>
+                    <button class="quiz-btn" data-correct="true">Fitoplânctons nos Oceanos</button>
+                    <button class="quiz-btn" data-correct="false">Gelo Polar</button>
+                </div>
+                <div id="quiz-feedback" class="quiz-feedback" aria-live="polite"></div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
