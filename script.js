@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     // --- ACESSIBILIDADE ---
     const btnIncreaseFont = document.getElementById('btn-increase-font');
     const btnDecreaseFont = document.getElementById('btn-decrease-font');
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('high-contrast');
     });
 
-    // --- CORREÇÃO DO BOTÃO "SAIBA MAIS" (Navegação Suave Suportada via JS como Fallback) ---
+    // --- BOTÃO "SAIBA MAIS" (Navegação Suave) ---
     const btnHero = document.getElementById('btn-hero');
     btnHero.addEventListener('click', (e) => {
         e.preventDefault();
@@ -34,25 +35,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- INTERATIVIDADE DO QUIZ ---
+    // --- QUIZ INTERATIVO ---
     const quizButtons = document.querySelectorAll('.quiz-btn');
     const quizFeedback = document.getElementById('quiz-feedback');
 
     quizButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Desabilita todos os botões após o clique
+            // Trava os botões após a resposta
             quizButtons.forEach(btn => btn.disabled = true);
 
             const isCorrect = button.getAttribute('data-correct') === 'true';
+            quizFeedback.classList.add('active');
 
             if (isCorrect) {
                 button.classList.add('correct');
-                quizFeedback.textContent = ' Resposta Correta! Os fitoplânctons marinhos geram a maior parte do oxigênio da Terra.';
+                quizFeedback.textContent = '⚡ Resposta Correta! Os fitoplânctons marinhos geram mais da metade do oxigênio do nosso planeta.';
+                quizFeedback.style.backgroundColor = 'rgba(0, 255, 136, 0.15)';
                 quizFeedback.style.color = 'var(--success-color)';
+                quizFeedback.style.border = '1px solid var(--success-color)';
             } else {
                 button.classList.add('incorrect');
-                quizFeedback.textContent = ' Incorreto. A resposta certa são os Fitoplânctons nos Oceanos!';
+                quizFeedback.textContent = '❌ Resposta Incorreta. A resposta correta é a letra B (Fitoplânctons nos Oceanos)!';
+                quizFeedback.style.backgroundColor = 'rgba(255, 0, 85, 0.15)';
                 quizFeedback.style.color = 'var(--error-color)';
+                quizFeedback.style.border = '1px solid var(--error-color)';
             }
         });
     });
